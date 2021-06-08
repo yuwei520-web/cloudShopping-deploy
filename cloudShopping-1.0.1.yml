@@ -13,6 +13,7 @@ services:
       MYSQL_ROOT_PASSWORD: system
       MYSQL_DATABASE: cloudShopping_db
 
+
   cloudShopping:
     image: ccr.ccs.tencentyun.com/antiratech/cloudshopping:1.0.1
     volumes:
