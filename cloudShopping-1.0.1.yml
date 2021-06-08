@@ -1,0 +1,15 @@
+version: "2"
+services:
+  mysql:
+    image: ccr.ccs.tencentyun.com/antiratech/mysql:5.7
+    ports:
+      - 3306:3306
+      - 3307:3307
+    volumes:
+      - ~/cloudShopping-deploy/mysql/data:/var/lib/mysql
+      - ~/cloudShopping-deploy/mysql/log:/var/log/mysql
+      - ~/cloudShopping-deploy/mysql/conf:/etc/mysql/mysql.conf.d/
+      - /etc/localtime:/etc/localtime
+    environment:
+      MYSQL_ROOT_PASSWORD: system
+      MYSQL_DATABASE: cloudShopping_db
