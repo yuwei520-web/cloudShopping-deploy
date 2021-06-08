@@ -13,3 +13,12 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: system
       MYSQL_DATABASE: cloudShopping_db
+
+  cloudShopping:
+    image: ccr.ccs.tencentyun.com/antiratech/cloudshopping:1.0.1
+    volumes:
+        - ~/cloudShopping-deploy/cloudShopping/logs:/logs
+        - ~/cloudShopping-deploy/cloudShopping/waf_default:/waf_default
+        - /etc/localtime:/etc/localtime
+    ports:
+        - 5002:5002
