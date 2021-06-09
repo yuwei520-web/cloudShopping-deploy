@@ -1,7 +1,7 @@
 version: "2"
 services:
   mysql:
-    image: ccr.ccs.tencentyun.com/antiratech/mysql:5.7
+    image: registry.cn-qingdao.aliyuncs.com/dzcyw/mysql:5.7
     ports:
       - 3306:3306
     volumes:
@@ -14,14 +14,14 @@ services:
       MYSQL_DATABASE: cloudShopping_db
 
 
-  cloudShopping:
-    image: ccr.ccs.tencentyun.com/antiratech/cloudshopping:1.0.1
-    volumes:
-        - ~/cloudShopping-deploy/cloudShopping/logs:/logs
-        - ~/cloudShopping-deploy/cloudShopping/waf_default:/waf_default
-        - /etc/localtime:/etc/localtime
-    ports:
-        - 5002:5002
+  #cloudShopping:
+    #image: ccr.ccs.tencentyun.com/antiratech/cloudshopping:1.0.1
+    #volumes:
+        #- ~/cloudShopping-deploy/cloudShopping/logs:/logs
+        #- ~/cloudShopping-deploy/cloudShopping/waf_default:/waf_default
+        #- /etc/localtime:/etc/localtime
+    #ports:
+        #- 5002:5002
 
 
 
