@@ -3,7 +3,7 @@ services:
   mysql:
     image: registry.cn-qingdao.aliyuncs.com/dzcyw/mysql:5.7
     ports:
-      - 3306:3306
+      - 3307:3307
     volumes:
       - ~/cloudShopping-deploy/mysql/data:/var/lib/mysql
       - ~/cloudShopping-deploy/mysql/log:/var/log/mysql
